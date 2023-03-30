@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Social Media Homepage</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+      }
+
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #3b5998;
+        color: #fff;
+        padding: 10px;
+        height: 65px;
+        position: fixed;
+        left: 0px;
+        right: 0px;
+        min-width: 180px;
+      }
+
+      header img {
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        cursor: pointer;
+        margin-right: 10px;
+      }
+
+      header form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+        margin: 0 auto;
+      }
+
+      header input[type="text"] {
+        width: 100%;
+        padding: 10px;
+        border-radius: 20px;
+        border: none;
+        outline: none;
+      }
+
+      .friends-list {
+        position: fixed;
+        top: 80px;
+        left: 0;
+        width: 200px;
+        height: calc(100vh - 80px);
+        background-color: #fff;
+        border-right: 1px solid #ccc;
+        overflow-y: auto;
+      }
+
+      .friends-list h2 {
+        font-size: 18px;
+        font-weight: bold;
+        padding: 10px;
+        border-bottom: 1px solid #ccc;
+      }
+
+      .friends-list ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .friends-list li {
+        padding: 10px;
+        border-bottom: 1px solid #ccc;
+        cursor: pointer;
+      }
+
+      .friends-list li:hover {
+        background-color: #f2f2f2;
+      }
+
+      .friends-list img {
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
+        margin-right: 10px;
+      }
+
+      .friends-list span {
+        font-size: 16px;
+      }
+
+      .friends-list small {
+        color: #aaa;
+        font-size: 14px;
+      }
+
+      .timeline-text{
+        color: rgb(27, 164, 255); 
+        cursor: pointer;
+      }
+      .timeline-text:hover{
+        color: blue;
+      }
+
+      .posts {
+        margin-left: 200px;
+        padding: 20px;
+        margin-right: 25px;
+      }
+
+      .post {
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        background-color: #fff;
+        padding: 10px;
+      }
+
+      .post-header {
+        display: flex;
+        align-items: center;
+      }
+
+      .post-header img {
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        margin-right: 10px;
+      }
+
+      .post-header h3 {
+        font-size: 16px;
+        font-weight: bold;
+      }
+
+      .post-header small {
+        color: #aaa;
+        font-size: 14px;
+        margin-left: auto;
+      }
+
+      .post-content {
+        margin-top: 10px;
+        font-size: 14px;
+      }
+
+      .post-image {
+        margin-top: 10px;
+        text-align: center;
+      }
+
+      .post-image img {
+        max-width: 100%;
+        max-height: 500px;
+      }
+
+      .post-actions {
+        display: flex;
+        margin-top: 10px;
+      }
+
+      .post-actions button {
+        background-color: transparent;
+        border: none;
+        outline: none
+      }
+
+      .post-actions button i {
+        margin-right: 5px;
+      }
+
+      .post-actions button.like {
+        color: #3b5998;
+      }
+
+      .post-actions button.comment {
+        color: #3b5998;
+      }
+
+      .post-actions button.share {
+        color: #3b5998;
+      }
+
+      .post-actions button:hover {
+        cursor: pointer;
+      }
+
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: #f1f1f1;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: #888;
+      }
+
+      ::-webkit-scrollbar-thumb:hover {
+        background: #555;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>My Social Media</h1>
+      <form>
+        <input type="text" placeholder="Search...">
+        <button type="submit"><i class="fa fa-search"></i></button>
+      </form>
+      <img src="https://cdn.dribbble.com/users/6142/screenshots/5679189/media/1b96ad1f07feee81fa83c877a1e350ce.png?compress=1&resize=400x300&vertical=top" alt="Profile Picture">
+      <img src="https://flaticons.net/icon.php?slug_category=mobile-application&slug_icon=settings-01">
+      <img src="https://iconsplace.com/wp-content/uploads/_icons/ffffff/256/png/shutdown-icon-18-256.png">
+    </header>
+
+    <div class="friends-list">
+      <h2>Friends</h2>
+      <ul>
+        <li>
+          <img src="https://images.theconversation.com/files/350865/original/file-20200803-24-50u91u.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1200&h=1200.0&fit=crop" alt="Friend 1">
+          <span>Friend 1</span> <span class="timeline-text"> +Timeline </span>
+          <br>
+          <small style="color:green;">Online</small>
+        </li>
+        <li>
+          <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/close-up-of-cat-wearing-sunglasses-while-sitting-royalty-free-image-1571755145.jpg" alt="Friend 2">
+          <span>Friend 2</span> <span class="timeline-text"> +Timeline </span>
+          <br>
+          <small>Offline</small>
+        </li>
+        <li>
+          <img src="https://media.istockphoto.com/photos/cool-cat-with-shades-picture-id1249884596?k=20&m=1249884596&s=612x612&w=0&h=16nnd8JAJW2MdEghUJnaAiZfPezWoVUTAW9bwOE3Z7E=" alt="Friend 3">
+          <span>Friend 3</span> <span class="timeline-text"> +Timeline </span>
+          <br>
+          <small style="color:green;">Online</small>
+        </li>
+        <li>
+          <img src="https://cdn.britannica.com/91/181391-050-1DA18304/cat-toes-paw-number-paws-tiger-tabby.jpg?q=60" alt="Friend 4">
+          <span>Friend 4</span> <span class="timeline-text"> +Timeline </span>
+          <br>
+          <small style="color: green;">Online</small>
+        </li>
+        <li style="text-align: center; color: rgb(27, 164, 255); text-decoration: underline; cursor: pointer;">
+          Suggest Friends
+        </li>
+      </ul>
+    </div>
+
+    <div class="posts" style="padding-top: 85px;">
+      <div class="post" style="text-align: center; background-color: rgb(150, 150, 150); color: white;">
+        +
+      </div>
+      <div class="post">
+        <div class="post-header">
+          <img src="https://images.theconversation.com/files/350865/original/file-20200803-24-50u91u.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1200&h=1200.0&fit=crop" alt="User 1">
+          <h3>User 1</h3>
+          <small>1 hour ago</small>
+        </div>
+        <div class="post-content">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis auctor, nisi eu bibendum scelerisque, turpis enim gravida velit, sit amet iaculis justo est vel eros.
+        </div>
+        <div class="post-actions">
+          <button class="like"><i class="fa fa-thumbs-up"></i>Like</button>
+          <button class="comment"><i class="fa fa-comment"></i>Comment</button>
+          <button class="share"><i class="fa fa-share"></i>Share</button>
+        </div>
+      </div>
+
+      <div class="post">
+        <div class="post-header">
+          <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/close-up-of-cat-wearing-sunglasses-while-sitting-royalty-free-image-1571755145.jpg" alt="User 2">
+          <h3>User 2</h3>
+          <small>2 hours ago</small>
+        </div>
+        <div class="post-content">
+          Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
+        </div>
+        <div class="post-image">
+          <img src="https://images.unsplash.com/photo-1679939099455-e3dc1d2b6dce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=435&q=80" alt="Post 1">
+        </div>
+        <div class="post-actions">
+          <button class="like"><i class="fa fa-thumbs-up"></i>Like</button>
+          <button class="comment"><i class="fa fa-comment"></i>Comment</button>
+          <button class="share"><i class="fa fa-share"></i>Share</button>
+        </div>
+      </div>
+
+      <div class="post">
+        <div class="post-header">
+          <img src="https://media.istockphoto.com/photos/cool-cat-with-shades-picture-id1249884596?k=20&m=1249884596&s=612x612&w=0&h=16nnd8JAJW2MdEghUJnaAiZfPezWoVUTAW9bwOE3Z7E=" alt="User 3">
+          <h3>User 3</h3>
+          <small>3 hours ago</small>
+        </div>
+        <div class="post-content">
+          Proin volutpat mauris non magna tristique blandit. Vivamus placerat ipsum in ex varius, at sagittis enim aliquam.
+        </div>
+        <div class="post-image">
+          <img src="https://images.unsplash.com/photo-1680082286331-4473a0801b0e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80" alt="Post 2">
+        </div>
+        <div class="post-actions">
+          <button class="like"><i class="fa fa-thumbs-up"></i>Like</button>
+          <button class="comment"><i class="fa fa-comment"></i>Comment</button>
+          <button class="share"><i class="fa fa-share"></i>Share</button>
+        </div>
+      </div>
+
+      <div class="post">
+        <div class="post-header">
+          <img src="https://cdn.britannica.com/91/181391-050-1DA18304/cat-toes-paw-number-paws-tiger-tabby.jpg?q=60" alt="User 4">
+          <h3>User 4</h3>
+          <small>4 hours ago</small>
+        </div>
+        <div class="post-content">
+          Aliquam quis diam feugiat, ullamcorper odio nec, molestie ipsum. Pellentesque vel aliquam sapien.
+        </div>
+        <div class="post-actions">
+          <button class="like"><i class="fa fa-thumbs-up"></i>Like</button>
+          <button class="comment"><i class="fa fa-comment"></i>Comment</button>
+          <button class="share"><i class="fa fa-share"></i>Share</button>
+        </div>
+      </div>
+
+      <div class="post">
+        <div class="post-header">
+          <img src="https://cdn.britannica.com/91/181391-050-1DA18304/cat-toes-paw-number-paws-tiger-tabby.jpg?q=60" alt="User 4">
+          <h3>User 4</h3>
+          <small>4 hours ago</small>
+        </div>
+        <div class="post-content">
+          <iframe src="https://www.instagram.com/therock/"> </iframe>
+        </div>
+        <div class="post-actions">
+          <button class="like"><i class="fa fa-thumbs-up"></i>Like</button>
+          <button class="comment"><i class="fa fa-comment"></i>Comment</button>
+          <button class="share"><i class="fa fa-share"></i>Share</button>
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>
+
+     
+          
+    

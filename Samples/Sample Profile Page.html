@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Instagram </title>
+        <style>
+            *{
+                font-family: system-ui;
+            }
+            body{
+                background-color: rgb(250,250,250);
+            }
+            .header{
+                display: flex;
+                height: 60px;
+                justify-content: space-evenly;
+                align-items: center;
+                box-shadow: 0px 0.5px 2px rgba(0,0,0,0.20);
+                padding-left: 70px;
+                padding-right: 85px;
+                background-color: white;
+            }
+            .instagram-logo{
+                margin-top: 8px;
+                margin-left: 25px;
+                height: 39px;
+            }
+            .search-bar{
+                background-color: rgb(240,240,240);
+                color: rgb(100,100,100);
+                border: 0;
+                height: 36px;
+                width: 250px;
+                border-radius: 8px;
+                padding-left: 20px;
+                font-size: 15px;
+            }
+            .log-in-button{
+                background-color: rgb(0,149,246);
+                color: white;
+                border-radius: 5px;
+                margin-right: 2px;
+            }
+            .sign-up-button{
+                background-color: white;
+                color: rgb(0,149,246);
+            }
+            .log-in-button,.sign-up-button{
+                border: none;
+                font-weight: 500;
+                font-size: 14px;
+                padding-top: 5px;
+                padding-bottom: 6px;
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+            .website-body{
+                display: flex;
+            }
+            .user-pfp{
+                height: 150px;
+                width: 150px;
+                border-radius: 75px;
+            }
+            .username{
+                display: inline-block;
+                font-size: 28px;
+                font-weight: 100;
+            }
+            .follow-button{
+                background-color: rgb(250,250,250);
+                color: rgb(38,38,38);
+                font-weight: 500;
+                font-size: 14px;
+                padding-left: 25px;
+                padding-top: 5px;
+                padding-bottom: 5px;
+                padding-right: 25px;
+                border: none;
+                border-radius: 5px;
+                margin-left: 20px;
+                box-shadow: 0px 0px 2px rgba(0,0,0,0.30);
+            }
+        </style>
+    </head>
+    <body style="margin: 0;">
+        <div class="header">
+            <div>
+                <img class="instagram-logo"  
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/2560px-Instagram_logo.svg.png">
+            </div>
+            <div>
+                <input class="search-bar" type="text" placeholder="Search">
+            </div>
+            <div>
+                <button class="log-in-button">Log in</button>
+                <button class="sign-up-button">Sign up</button>
+            </div>
+        </div>
+
+        <div class="website-body">
+            <div style="flex: 1;"></div>
+            <div style="flex: 3;">
+                <div style="display: flex; align-items: center;">
+                    <div style=" padding: 57.5px;">
+                        <img class="user-pfp" 
+                         src="https://www.bugatti.com/fileadmin/_processed_/sei/p1/se-image-fbf28c7252f24bee40d73108cc3bad71.jpg">
+                    </div>
+                    <div style="flex: 3; height: 268px; padding-left: 45px;line-height: 25px;">
+                        <div>
+                            <p class="username"> abdurrx_ </p>
+                            <button class="follow-button"> Follow </button>
+                        </div>
+                        <div>
+                            <span style="font-weight: 500;">5</span> <span style="font-size:16px; margin-right: 35px;">posts</span>
+                            <span style="font-weight: 500;">627</span> <span style="font-size:16px; margin-right: 35px;">followers</span>
+                            <span style="font-weight: 500;">299</span> <span style="font-size:16px; margin-right: 35px;">following</span>
+                        </div>
+                        <div style="line-height: 8px; padding-top: 16px; font-size: 16px;">
+                            <p> ABD </p>
+                            <p> self proclaimed free thinker </p>
+                            <p> main: <span style="color: rgb(0,55,107);"> @noflexibility </span> </p>
+                            <p> art: <span style="color: rgb(0,55,107);"> @inkondeck </span> </p>
+                        </div>
+                    </div>
+                </div>
+                <div style="display: flex; background-color: white; height:160px; box-shadow: 0px -1px 1px rgba(0,0,0,0.05);
+                 border: 0.5px solid rgb(220, 220, 220);">
+                    <div style="flex:1;"></div>
+
+                    <div style="font-size: 14px; padding-top: 25px;">
+                        <p style="margin-left: 37px; margin-bottom: 18px;">This account is private</p>
+                        <p style="margin-bottom: 0;">Already following abdurrx_? <span style="color: rgb(0,149,246);">Log in</span> </p>
+                        <p style="margin-left: 10px; margin-top: 5px;">to see their photos and videos.</p>
+                    </div>
+
+                    <div style="flex:1;"></div>
+                </div>
+                
+            </div>
+            <div style="flex:1"></div>
+        </div>
+
+    </body>
+</html>

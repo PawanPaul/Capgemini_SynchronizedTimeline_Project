@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Twitter Sample </title> 
+        <style>
+            .cat-image {
+                vertical-align: top;
+                width: 60px;
+                height: 60px;
+                border-radius: 30px;
+                object-fit: cover;
+                cursor: pointer;
+            }
+            
+            .tweet-box {
+                margin-left: 12px;
+                padding-left: 10px;
+                font-size: 25px;
+                height: 50px;
+                width: 450px;
+                border: 0;
+                border-radius: 5px;
+            }
+
+            .tweet-button{
+                background-color: rgb(29, 155, 240);
+                color: white;
+                font-weight: bold;
+                font-size: 22px;
+                border: none;
+                margin-left: 10px;
+                padding-left: 18px;
+                padding-right: 18px;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                border-radius: 25px;
+                cursor: pointer;
+                transition: box-shadow 150ms;
+            }
+
+            .tweet-button:hover{
+                box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
+            }
+
+            .tweet-button:active{
+                opacity: 0.90;
+            }
+
+            .tweet-outline {
+                margin: auto;
+                box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.2);
+                height: 100px;
+                width: 860px;
+                padding-top: 40px;
+                padding-left: 200px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="tweet-outline">
+        <img class="cat-image"
+        src="https://media-cldnry.s-nbcnews.com/image/upload/rockcms/2022-07/220726-cat-theo-elise-ew-636p-6cd3b0.jpg"/>
+        <input class="tweet-box" type="text" placeholder="What's happening?">
+        <button class="tweet-button">
+            Tweet
+        </button>
+        </div>
+    </body>
+</html>

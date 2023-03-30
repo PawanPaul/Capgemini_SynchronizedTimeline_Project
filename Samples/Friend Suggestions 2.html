@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Friends Grid </title>
+        <style>
+            p{
+                font-family: Arial, Helvetica, sans-serif;
+                margin-left: 10px;
+                margin-top: 10px;
+                margin-bottom: 0px;
+            }
+            .friends-grid {
+                display: grid;
+                grid-template-columns: 200px 200px 200px;
+                column-gap: 18px;
+            }
+            .profile-picture{
+                width: 200px;
+                height: 200px;
+                object-fit: cover;
+            }
+            .name{
+                font-size: 16px;
+                font-weight: bolder;
+                font-size: large;
+            }
+            .mutuals{
+                margin-top: 2px;
+                margin-bottom: 10px;
+                color: rgb(110,110,110);
+            }
+            .add-friend{
+                background-color: rgb(34, 121, 220);
+                border: none;
+                border-radius: 3px;
+                margin-left: 10px;
+                font-size: 16px;
+                color: white;
+                padding-top: 9px;
+                padding-bottom: 9px;
+                padding-left: 18px;
+                padding-right: 18px;
+                cursor: pointer;
+            }
+
+        </style>
+    </head>
+
+    <body style="padding-top: 20px; padding-left: 10px;">
+        <div class="friends-grid">
+            <div style="background-color:white;
+            box-shadow: 0px 0px 6px rgba(0,0,0,0.4);">
+                <div>
+                    <img class="profile-picture"
+                    src="https://images.theconversation.com/files/350865/original/file-20200803-24-50u91u.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1200&h=1200.0&fit=crop">
+                </div>
+                <div>
+                    <p class="name">Oliver</p>
+                </div>
+                <div>
+                    <p class="mutuals"> 2 mutual friends </p>
+                </div>
+                <div style="padding-bottom: 15px;">
+                    <button class="add-friend">
+                        Add Friend
+                    </button>
+                </div>
+            </div>
+            
+            <div style="background-color:white;
+            box-shadow: 0px 0px 6px rgba(0,0,0,0.4);">
+                <div>
+                    <img class="profile-picture"
+                    src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/close-up-of-cat-wearing-sunglasses-while-sitting-royalty-free-image-1571755145.jpg">
+                </div>
+                <div>
+                    <p class="name"> Mimi </p>
+                </div>
+                <div>
+                    <p class="mutuals"> 3 mutual friends </p>
+                </div>
+                <div>
+                    <button class="add-friend">
+                        Add Friend
+                    </button>
+                </div>
+            </div>
+
+            <div style="background-color:white;
+            box-shadow: 0px 0px 6px rgba(0,0,0,0.4);">
+                <div>
+                    <img class="profile-picture"
+                    src="https://media.istockphoto.com/photos/cool-cat-with-shades-picture-id1249884596?k=20&m=1249884596&s=612x612&w=0&h=16nnd8JAJW2MdEghUJnaAiZfPezWoVUTAW9bwOE3Z7E=">
+                </div>
+                <div>
+                    <p class="name"> Rex </p>
+                </div>
+                <div>
+                    <p class="mutuals"> 4 mutual friends </p>
+                </div>
+                <div>
+                    <button class="add-friend">
+                        Add Friend
+                    </button>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

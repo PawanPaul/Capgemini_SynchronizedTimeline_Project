@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Inbox </title>
+        <style>
+            div{
+                font-family: Arial;
+            }
+            .inbox-label{
+                margin-bottom: 20px;
+                font-size: 13px;
+                color: gray;
+            }
+            .sent-time,.mail-preview{
+                color: gray;
+                font-size: 14px;
+            }
+            .pfp{
+                height: 45px;
+                width: 45px;
+                object-fit: cover;
+                border-radius: 25px;
+            }
+            .sender-details{
+                display: flex;
+            }
+            .sender-name{
+                flex: 1;
+                font-weight: bold;
+                font-size: 17px;
+            }
+            .mail-subject{
+                font-size: 14px;
+                font-weight: bold;
+            }
+            .mail-preview{
+                margin-right: 20px;
+            }
+            .mail-details{
+                flex: 1;
+                display: inline-block; 
+                line-height: 20px; 
+            }
+        
+        </style>
+    </head>
+    <body style="padding: 20px;">
+
+        <div style="
+            display: inline-block;
+            box-shadow: 0px 0px 4px rgba(0,0,0,0.3);
+            border-radius: 8px;
+            padding: 15px;
+            padding-top: 10px;
+        ">
+            <div class="inbox-label">ALL INBOXES</div>
+
+            <div style="display: flex; align-items: center; margin-bottom: 15px;
+            ">
+                <div style="display: inline-block; margin-right: 10px;">
+                    <img class="pfp"
+                    src="https://images.news18.com/ibnlive/uploads/2021/08/1628397369_cat-stereotypes-1200x800.jpg?impolicy=website&width=510&height=356">
+                </div>
+
+                <div class="mail-details">
+                    <div class="sender-details">
+                        <div class="sender-name">Chewy Promotions</div>
+                        <div class="sent-time">4:58 PM</div>
+                    </div>
+                    <div class="mail-subject">Biggest sales of the year!</div>
+                    <div class="mail-preview">Hey there! We're writing to tell you about our...</div>
+                </div>
+            </div>
+
+            <div style="display: flex; align-items: center; margin-bottom: 15px;
+            ">
+                <div style="display: inline-block; margin-right: 10px;">
+                    <img class="pfp"
+                    src="https://www.gannett-cdn.com/-mm-/428d5c4bd2e8866dabd099a10d07c1c92e90bcd4/c=0-0-881-498/local/-/media/2018/04/18/USATODAY/USATODAY/636596669293144926-BBY-on-blue-1.jpg">
+                </div>
+
+                <div class="mail-details">
+                    <div class="sender-details">
+                        <div class="sender-name">Best Buy</div>
+                        <div class="sent-time">12:32 PM</div>
+                    </div>
+                    <div class="mail-subject">Your Best Buy eReceipt</div>
+                    <div class="mail-preview">Thank you for shopping at Best Buy, here is...</div>
+                </div>
+            </div>
+
+            <div style="display: flex; align-items: center; margin-bottom: 15px;
+            ">
+                <div style="display: inline-block; margin-right: 10px;">
+                    <img class="pfp"
+                    src="https://www.designmantic.com/blog/wp-content/uploads/2016/07/Netflix-Revamps-Logo-1280x720.jpg">
+                </div>
+
+                <div class="mail-details">
+                    <div class="sender-details">
+                        <div class="sender-name">Netflix</div>
+                        <div class="sent-time">9:00 AM</div>
+                    </div>
+                    <div class="mail-subject">Here's what's coming soon to Netflix</div>
+                    <div class="mail-preview">Brand new movies and shows,old favorites...</div>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>

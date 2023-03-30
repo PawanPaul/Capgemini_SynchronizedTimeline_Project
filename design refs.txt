@@ -1,0 +1,6 @@
+Icons and Icon sets:
+https://freefrontend.com/css-social-media-icons/
+https://csshint.com/css-social-media-icons/
+
+CSS Image Reveal Animations:
+https://csshint.com/css-reveal-animations/

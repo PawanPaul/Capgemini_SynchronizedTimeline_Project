@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Modal Example </title>
+        <style>
+            .overlay{
+                color: white;
+                background-color: rgba(0,0,0,0.8);
+                position: fixed;
+                top: 0; bottom: 0; left: 0; right: 0;
+                display: flex;
+                align-items: center;
+            }
+            .modal{
+                font-family: Arial;
+                background: url(https://images.pexels.com/photos/12238173/pexels-photo-12238173.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load);
+                color: black;
+                height: 175px;
+                width: 425px;
+                border-radius: 10px;
+                display: flex; flex-direction: column;
+                justify-content: space-evenly;
+                padding-left: 25px;
+            }
+
+        </style>
+    </head>
+    <body style="background-color:lightgreen;">
+        <div class="overlay">
+            <div style="flex:1"> </div>
+            <div>
+                <div class="modal"> 
+                    <div style="font-size: 30px; font-weight: bold;">Modal Title</div>
+                    <div style="font-size: 20px;">This is a modal</div>
+                    <div> <button style="font-size: 17px;"> Close </button> </div>
+                </div>
+            </div>
+            <div style="flex: 1"> </div>
+        </div>
+        <div>
+            <p style="font-size: 60px; font-weight: bold;"> Welcome to Apple India </p>
+            <p style="font-size: 25px;"> click here to browse </p>
+        </div>
+    </body>
+</html>
