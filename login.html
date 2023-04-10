@@ -99,6 +99,53 @@
       left:450px;
     }
     </style>
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-app.js";
+      import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-analytics.js";
+      import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-auth.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+    
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      const firebaseConfig = {
+        apiKey: "AIzaSyC-821xeILE10XynPEv5TkoZMUXDINfzHA",
+        authDomain: "synchronized-timeline.firebaseapp.com",
+        databaseURL: "https://synchronized-timeline-default-rtdb.firebaseio.com",
+        projectId: "synchronized-timeline",
+        storageBucket: "synchronized-timeline.appspot.com",
+        messagingSenderId: "883432285382",
+        appId: "1:883432285382:web:25c3d134a429c6198ea3c7",
+        measurementId: "G-E68HXCBHGY"
+      };
+    
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const analytics = getAnalytics(app);
+      const auth = getAuth(app);
+
+      RegisterButton.addEventListener('click',(e)=>{
+        var source=e;
+        console.log(source);
+        var email=document.getElementById('regemail').value;
+        var password=document.getElementById('regpassword').value;
+
+        createUserWithEmailAndPassword(auth, email, password)
+        .then((userCredential) => {
+        // Signed in 
+        const user = userCredential.user;
+        // ...
+        window.location.replace('home_page.html')
+       })
+       .catch((error) => {
+       const errorCode = error.code;
+       const errorMessage = error.message;
+       // ..
+       alert(errorMessage);
+      });
+      });
+    </script>
   </head>
   <body>
     <!-- HTML code starts here -->
@@ -113,19 +160,17 @@
 
 
         <!--For User Login-->
-        <form id="login" class="input-group" action="log.php" name="myform1" method="post" onsubmit="return valform1();">
-              <input type="text" name="fname1" value="" class="input-field" placeholder="User-Id">
-              <input type="password" name="psword1" value="" class="input-field" placeholder="password">
+        <form id="login" class="input-group" name="myform1">
+          <input type="email" id="logemail" name="email" value="" class="input-field" placeholder="Email">
+              <input type="password" id="logpassword" name="psword1" value="" class="input-field" placeholder="Password">
               <input type="submit" name="button" class="submit-btn" value="Log in">
         </form>
 
         <!--For User Register-->
-        <form id="register" class="input-group" action="reg.php" name="myform2" method="post" onsubmit="return valform2();">
-              <input type="text" name="fname2" value="" class="input-field" placeholder="User-Name">
-              <input type="email" name="email" value="" class="input-field" placeholder="Enter Your Email">
-              <input type="password" name="psword2" value="" class="input-field" placeholder="password">
-              <input type="checkbox" name="agree2" value="" class="check-box"><span>I agree to terms and conditioins</span>
-              <input type="submit" name="button" class="submit-btn" value="Register">
+        <form id="register" class="input-group" name="myform2">
+              <input type="email" id="regemail" name="email" value="" class="input-field" placeholder="Email">
+              <input type="password" id="regpassword" name="psword2" value="" class="input-field" placeholder="Password">
+              <input type="submit" id="RegisterButton" name="button" class="submit-btn" value="Register">
         </form>
       </div>
     </div>
